@@ -1,5 +1,15 @@
 # Pythonic Filesystems in Userspace (FUSE) in 2019
 
+[Filesystem in Userspace](https://en.wikipedia.org/wiki/Filesystem_in_Userspace)
+
+## API
+
+Two widely used versions exist: 2 and 3. While version 3 is currently being adopted by more and more projects, most FUSE file systems tend to use version 2 at this point.
+
+Besides API versions, there are also two API levels: The high level FUSE API and the low level FUSE API.
+
+Not all FUSE libraries and bindings offer both API versions and/or API levels. This must be taken into consideration when developing a cross-platform FUSE file system.
+
 ## Libraries
 
 While FUSE is (at least in the Unix world) a Kernel feature, several user space libraries exist for easy access. `libfuse` acts as the reference implementation.
@@ -10,8 +20,8 @@ While FUSE is (at least in the Unix world) a Kernel feature, several user space 
 - [FUSE for macOS](https://github.com/osxfuse/osxfuse) (OSX)
 - [MacFUSE](https://code.google.com/archive/p/macfuse/) (OSX), no longer maintained
 - [WinFsp](https://github.com/billziss-gh/winfsp) (Windows)
-- [Dokan](https://code.google.com/archive/p/dokan/) (Windows), no longer maintained
 - [Dokany](https://github.com/dokan-dev/dokany) (Windows)
+- [Dokan](https://code.google.com/archive/p/dokan/) (Windows), no longer maintained
 
 In summary, FUSE is supported on Linux, FreeBDS, OpenBSD, NetBSD, Mac OS X and Windows. APIs are (more or less) compatible. FUSE is also known to work on OpenSolaris/Illumos, Minix and Android.
 
